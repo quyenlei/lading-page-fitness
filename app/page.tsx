@@ -1,9 +1,10 @@
+import { HomePage } from "@/components/home";
 import { MainLayout } from "@/components/layout";
 
-export default function HomePage() {
+export default function Home() {
     return (
         <MainLayout>
-            <h1 className="">Hello World</h1>
+            <HomePage />
         </MainLayout>
     );
 }

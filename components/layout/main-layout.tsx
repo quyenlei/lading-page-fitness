@@ -1,7 +1,15 @@
-type Props = {
+import { Header } from "@/components/layout/header";
+type MainLayoutProps = {
     children?: React.ReactNode;
 };
 
-export async function MainLayout({ children }: Props) {
-    return <div className="container">{children}</div>;
+export function MainLayout({ children }: MainLayoutProps) {
+    return (
+        <>
+            <Header />
+            <main id="top" className="mx-auto max-w-328 pb-10">
+                {children}
+            </main>
+        </>
+    );
 }

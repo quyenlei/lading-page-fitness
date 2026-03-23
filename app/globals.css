@@ -2,9 +2,14 @@
 
 :root {
   --container-max: 1200px;
+  --font-poppins: var(--font-poppins);
+  --font-inter: var(--font-inter);
 }
 
-@theme inline {}
+@theme inline {
+  --font-inter: var(--font-inter);
+  --font-poppins: var(--font-poppins);
+}
 
 @layer utilities {}
 
@@ -12,12 +17,16 @@ button {
   cursor: pointer;
 }
 
-body {}
+body {
+  font-family: var(--font-inter), sans-serif;
+}
 
 .container {
   max-width: var(--container-max);
   position: relative;
   margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .grecaptcha-badge {
