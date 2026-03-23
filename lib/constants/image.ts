@@ -1,0 +1,1 @@
+export const NO_IMAGE_URL = "/images/no-image.png";

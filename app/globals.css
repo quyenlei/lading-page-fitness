@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+:root {
+  --container-max: 1200px;
+}
+
+@theme inline {}
+
+@layer utilities {}
+
+button {
+  cursor: pointer;
+}
+
+body {}
+
+.container {
+  max-width: var(--container-max);
+  position: relative;
+  margin: 0 auto;
+}
+
+.grecaptcha-badge {
+  display: none !important;
+}
