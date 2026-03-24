@@ -55,12 +55,25 @@ function MembershipCard({
 
 export function MembershipSection() {
     return (
-        <section className="pb-12 sm:pb-16 md:pb-20 px-4 lg:px-0">
-            <h2 className="mb-4 text-2xl font-medium leading-[1.3] tracking-[0.016em] text-white sm:mb-5 sm:text-3xl md:text-[3.125rem]">
+        <section
+            id="membership"
+            className="scroll-mt-6 px-4 pb-12 sm:pb-16 md:pb-20 lg:px-0"
+        >
+            <h2
+                data-anim="membership-title"
+                className="mb-4 text-2xl font-medium leading-[1.3] tracking-[0.016em] text-white sm:mb-5 sm:text-3xl md:text-[3.125rem]"
+            >
                 Membership
             </h2>
-            <div className="h-px w-full bg-white/40" aria-hidden />
-            <div className="mt-8 grid grid-cols-1 gap-5 sm:mt-10 sm:gap-6 lg:grid-cols-2">
+            <div
+                data-anim="membership-rule"
+                className="h-px w-full bg-white/40"
+                aria-hidden
+            />
+            <div
+                data-anim="membership-grid"
+                className="mt-8 grid grid-cols-1 gap-5 sm:mt-10 sm:gap-6 lg:grid-cols-2"
+            >
                 <MembershipCard
                     title="Join for Free"
                     description="Reach your fitness goals or maintain your healthy lifestyle with professional training and support from a positive and active online community."
@@ -78,6 +91,7 @@ export function MembershipSection() {
             <div className="mt-6 flex sm:mt-8 sm:justify-end">
                 <a
                     href="#top"
+                    data-anim="back-top"
                     className="inline-flex min-h-11 w-full items-center justify-center bg-[#FAFAF9] px-5 py-2 font-['Poppins'] text-base font-semibold text-[#303030] sm:w-auto"
                 >
                     Back to Top

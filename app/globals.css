@@ -6,6 +6,12 @@
   --font-inter: var(--font-inter);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @theme inline {
   --font-inter: var(--font-inter);
   --font-poppins: var(--font-poppins);

@@ -22,14 +22,21 @@ const LOGO_H = 20;
 export function FeaturedInSection() {
     return (
         <div className="flex flex-col gap-4">
-            <p className="text-[0.875rem] uppercase leading-[1.5714] tracking-[0.0714em] text-[#efede8a6]">
+            <p
+                data-anim="featured-label"
+                className="text-[0.875rem] uppercase leading-[1.5714] tracking-[0.0714em] text-[#efede8a6]"
+            >
                 AS FEATURED IN
             </p>
 
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
                 {featuredLogos.map((logo, idx) => {
                     return (
-                        <div key={`logo-${idx}`} className="h-5">
+                        <div
+                            key={`logo-${idx}`}
+                            data-anim="featured-logo"
+                            className="h-5 will-change-transform"
+                        >
                             <Image
                                 src={logo.src}
                                 alt={logo.alt}

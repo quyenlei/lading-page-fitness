@@ -76,23 +76,38 @@ function FeatureCard({
 export function ContentSections() {
     return (
         <>
-            <section className="py-16 sm:py-24 md:py-32 lg:py-40 px-4 lg:px-0">
-                <h2 className="text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[2.5rem]">
-                    Not sure where to start?
-                </h2>
-                <p className="mt-3 max-w-3xl text-sm leading-7 tracking-[0.03em] text-[#efede8a6] sm:mt-4 sm:text-base">
-                    Programs offer day-to-day guidance on an interactive
-                    calendar to keep you on track.
-                </p>
-                <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5 md:gap-6 xl:grid-cols-4">
+            <section
+                id="programs"
+                className="scroll-mt-6 px-4 py-16 sm:py-24 md:py-32 lg:px-0 lg:py-40"
+            >
+                <div data-anim="section-intro">
+                    <h2 className="text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[2.5rem]">
+                        Not sure where to start?
+                    </h2>
+                    <p className="mt-3 max-w-3xl text-sm leading-7 tracking-[0.03em] text-[#efede8a6] sm:mt-4 sm:text-base">
+                        Programs offer day-to-day guidance on an interactive
+                        calendar to keep you on track.
+                    </p>
+                </div>
+                <div
+                    data-anim="feature-grid"
+                    className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5 md:gap-6 xl:grid-cols-4"
+                >
                     {featureCards.map((card) => (
                         <FeatureCard key={card.title} {...card} />
                     ))}
                 </div>
             </section>
 
-            <section className="flex flex-col px-4 lg:px-0 gap-10 pb-16 sm:gap-12 sm:pb-24 md:gap-14 md:pb-32 lg:gap-16 lg:pb-40">
-                <article className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-20">
+            <section
+                id="about-section"
+                className="flex flex-col gap-10 px-4 pb-16 scroll-mt-6 sm:gap-12 sm:pb-24 md:gap-14 md:pb-32 lg:gap-16 lg:px-0 lg:pb-40"
+            >
+                <article
+                    id="workouts"
+                    data-anim="content-block"
+                    className="grid scroll-mt-6 grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-20"
+                >
                     <div className="min-w-0">
                         <h3 className="text-2xl font-semibold text-white sm:text-3xl">
                             Work out at home for free.
@@ -128,7 +143,11 @@ export function ContentSections() {
                     </div>
                 </article>
 
-                <article className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center lg:gap-20">
+                <article
+                    id="healthy-living"
+                    data-anim="content-block"
+                    className="grid scroll-mt-6 grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center lg:gap-20"
+                >
                     <div className="order-1 overflow-hidden bg-[#303030] lg:order-1">
                         <Image
                             src="/images/section-training.png"

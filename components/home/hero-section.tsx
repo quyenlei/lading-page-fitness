@@ -3,21 +3,38 @@ import { FeaturedInSection } from "./featured-in-section";
 
 export function HeroSection() {
     return (
-        <section className="relative px-4 lg:px-0 grid grid-cols-1 gap-10 pb-12 pt-6 sm:gap-12 sm:pb-16 sm:pt-8 md:gap-14 lg:min-h-185.25 lg:grid-cols-[1fr_25.5625rem] lg:items-start lg:gap-0 lg:pb-20 lg:pt-10">
+        <section
+            id="workout"
+            className="relative grid grid-cols-1 gap-10 px-4 pb-12 pt-6 scroll-mt-6 sm:gap-12 sm:pb-16 sm:pt-8 md:gap-14 lg:min-h-185.25 lg:grid-cols-[1fr_25.5625rem] lg:items-start lg:gap-0 lg:px-0 lg:pb-20 lg:pt-10"
+        >
             <div className="flex w-full max-w-220 flex-col gap-10 sm:gap-14 md:gap-20 lg:gap-40">
                 <div>
-                    <h1 className="text-[2.5rem] font-extrabold uppercase leading-[0.98] tracking-[-0.012em] text-[#FAFAF9] sm:text-[3.25rem] md:text-[3.5rem] lg:text-[10.75rem]">
-                        workout
+                    <h1 className="text-[2.5rem] font-extrabold uppercase leading-[0.98] tracking-[-0.012em] text-[#FAFAF9] sm:text-[3.25rem] md:text-[3.5rem] lg:text-[10.75rem] [perspective:1200px]">
+                        <span
+                            data-anim="hero-line"
+                            className="inline-block will-change-transform"
+                        >
+                            workout
+                        </span>
                         <br />
-                        with me
+                        <span
+                            data-anim="hero-line"
+                            className="inline-block will-change-transform"
+                        >
+                            with me
+                        </span>
                     </h1>
-                    <p className="mt-5 max-w-140 text-sm leading-6 tracking-[0.03125em] text-[#efede8a6] sm:mt-6 sm:text-base md:mt-8">
+                    <p
+                        data-anim="hero-sub"
+                        className="mt-5 max-w-140 text-sm leading-6 tracking-[0.03125em] text-[#efede8a6] sm:mt-6 sm:text-base md:mt-8"
+                    >
                         A huge selection of health and fitness content, healthy
                         recipes and transformation stories to help you get fit and
                         stay fit.
                     </p>
                     <button
                         type="button"
+                        
                         className="mt-8 w-full rounded-[0.625rem] bg-[#E6533C] px-6 py-4 text-base font-semibold leading-[1.222] tracking-[0.0555em] text-white transition hover:opacity-90 sm:mt-10 sm:w-auto sm:px-6.25 sm:py-6 sm:text-[1.125rem] md:mt-12"
                     >
                         Join Club Now!
@@ -27,7 +44,10 @@ export function HeroSection() {
             </div>
 
             <div className="relative mx-auto mt-2 w-full max-w-102.25 lg:mt-0 lg:-ml-40">
-                <div className="overflow-hidden rounded-xl pt-8 sm:pt-12 lg:pt-16">
+                <div
+                    data-anim="hero-visual-inner"
+                    className="overflow-hidden rounded-xl pt-8 sm:pt-12 lg:pt-16 will-change-transform"
+                >
                     <Image
                         src="/images/hero-main-669d30.png"
                         alt="Fitness model"
@@ -39,7 +59,10 @@ export function HeroSection() {
                     />
                 </div>
 
-                <div className="absolute right-2 top-4 z-10 hidden h-24 w-45 rounded-xl bg-[#EF8964] sm:block sm:h-24 sm:w-40 md:right-3 md:top-8 md:h-27.5 md:w-45 lg:top-9 lg:-right-15">
+                <div
+                    data-anim="hero-stat"
+                    className="absolute right-2 top-4 z-10 hidden h-24 w-45 rounded-xl bg-[#EF8964] sm:block sm:h-24 sm:w-40 md:right-3 md:top-8 md:h-27.5 md:w-45 lg:top-9 lg:-right-15 will-change-transform"
+                >
                     <div className="flex h-full w-full flex-col gap-2 px-4 pt-3 sm:gap-3 sm:px-6.5 sm:pt-3.5">
                         <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#EFA082] sm:h-6 sm:w-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -66,7 +89,10 @@ export function HeroSection() {
                     </div>
                 </div>
 
-                <div className="absolute -left-2 bottom-28 z-10 hidden h-20 w-44 rounded-xl bg-[#303030] sm:-left-6 sm:bottom-36 sm:block sm:h-22 sm:w-48 md:-left-16 md:bottom-44 lg:-left-28 lg:bottom-52 lg:h-24 lg:w-51.5">
+                <div
+                    data-anim="hero-stat"
+                    className="absolute -left-2 bottom-28 z-10 hidden h-20 w-44 rounded-xl bg-[#303030] sm:-left-6 sm:bottom-36 sm:block sm:h-22 sm:w-48 md:-left-16 md:bottom-44 lg:-left-28 lg:bottom-52 lg:h-24 lg:w-51.5 will-change-transform"
+                >
                     <div className="flex h-full items-center gap-2 px-4 sm:gap-3 sm:px-5.75">
                         <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EF8963] text-white sm:h-10 sm:w-10">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" className="h-8 w-8 sm:h-10 sm:w-10">
@@ -85,7 +111,10 @@ export function HeroSection() {
                     </div>
                 </div>
 
-                <div className="absolute bottom-20 right-2 z-10 hidden h-20 w-40 rounded-xl bg-[#7A29DC] px-4 py-3 sm:bottom-24 sm:right-3 sm:block sm:h-22 sm:w-44 sm:px-5 sm:py-4 md:bottom-28 lg:bottom-31 lg:-right-33 lg:h-24.5 lg:w-48.25 lg:py-4.25">
+                <div
+                    data-anim="hero-stat"
+                    className="absolute bottom-20 right-2 z-10 hidden h-20 w-40 rounded-xl bg-[#7A29DC] px-4 py-3 sm:bottom-24 sm:right-3 sm:block sm:h-22 sm:w-44 sm:px-5 sm:py-4 md:bottom-28 lg:bottom-31 lg:-right-33 lg:h-24.5 lg:w-48.25 lg:py-4.25 will-change-transform"
+                >
                     <p className="text-[2rem] font-semibold leading-none tracking-[0.025em] text-[#FAFAF9] sm:text-[2.25rem] lg:text-[2.5rem]">
                         500+
                     </p>
