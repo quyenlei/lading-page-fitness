@@ -84,13 +84,13 @@ export function Header({
                 </div>
             ) : null}
             <nav className="relative z-50 flex items-center justify-between gap-4" aria-label="Main">
-                <a
+                <Link
                     href="/"
                     className="shrink-0 text-lg font-bold tracking-[0.02em] text-white sm:text-xl"
                     onClick={closeMenu}
                 >
                     {brand}
-                </a>
+                </Link>
                 <button
                     type="button"
                     className="inline-flex h-11 w-11 items-center justify-center rounded-md text-white transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white lg:hidden"
