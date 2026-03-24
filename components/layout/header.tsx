@@ -1,6 +1,7 @@
 "use client";
 
 import { HEADER_NAV_ITEMS, type HeaderNavItem } from "@/components/layout/header-nav";
+import { cn } from "@/lib/utils/common";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
@@ -16,6 +17,7 @@ export function Header({
     navItems = HEADER_NAV_ITEMS,
 }: HeaderProps) {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     const closeMenu = useCallback(() => setMenuOpen(false), []);
 
@@ -55,6 +57,15 @@ export function Header({
     }, []);
 
     useEffect(() => {
+        const onScroll = () => {
+            setScrolled(window.scrollY > 12);
+        };
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
+    useEffect(() => {
         if (menuOpen) {
             document.body.style.overflow = "hidden";
         } else {
@@ -81,7 +92,15 @@ export function Header({
     }, []);
 
     return (
-        <header className="relative z-50 mx-auto w-full max-w-328 px-4 py-6 sm:px-6 md:py-10 lg:px-0 lg:py-12">
+        <header
+            className={cn(
+                "sticky top-0 z-50 mx-auto w-full max-w-328 transition-[padding,background-color,box-shadow,backdrop-filter] duration-200 ease-out motion-reduce:transition-none",
+                "px-4 py-6 sm:px-6 md:py-10 lg:px-0 lg:py-12",
+                scrolled || menuOpen
+                    ? " bg-[#171717]/92 py-4 md:py-6 lg:py-8"
+                    : "bg-transparent",
+            )}
+        >
             <div
                 id="header-mobile-nav"
                 className={`fixed inset-0 z-40 transition-[opacity,visibility] duration-300 ease-out motion-reduce:transition-none lg:hidden ${

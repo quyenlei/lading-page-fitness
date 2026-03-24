@@ -4,6 +4,12 @@
   --container-max: 1200px;
   --font-poppins: var(--font-poppins);
   --font-inter: var(--font-inter);
+  /* Sticky header — anchor scroll & scrollIntoView offset */
+  --header-scroll-padding: 6rem;
+}
+
+html {
+  scroll-padding-top: var(--header-scroll-padding);
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -57,7 +57,7 @@ export function MembershipSection() {
     return (
         <section
             id="membership"
-            className="scroll-mt-6 px-4 pb-12 sm:pb-16 md:pb-20 lg:px-0"
+            className="px-4 pb-12 sm:pb-16 md:pb-20 lg:px-0"
         >
             <h2
                 data-anim="membership-title"

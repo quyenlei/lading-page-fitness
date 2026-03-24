@@ -5,7 +5,7 @@ export function HeroSection() {
     return (
         <section
             id="workout"
-            className="relative grid grid-cols-1 gap-10 px-4 pb-12 pt-6 scroll-mt-6 sm:gap-12 sm:pb-16 sm:pt-8 md:gap-14 lg:min-h-185.25 lg:grid-cols-[1fr_25.5625rem] lg:items-start lg:gap-0 lg:px-0 lg:pb-20 lg:pt-10"
+            className="relative grid grid-cols-1 gap-10 px-4 pb-12 pt-6 sm:gap-12 sm:pb-16 sm:pt-8 md:gap-14 lg:min-h-185.25 lg:grid-cols-[1fr_25.5625rem] lg:items-start lg:gap-0 lg:px-0 lg:pb-20 lg:pt-10"
         >
             <div className="flex w-full max-w-220 flex-col gap-10 sm:gap-14 md:gap-20 lg:gap-40">
                 <div>
