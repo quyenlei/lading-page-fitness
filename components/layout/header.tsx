@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 type HeaderProps = {
@@ -65,7 +66,7 @@ export function Header({
                         <ul className="flex flex-col gap-1 overflow-y-auto overscroll-contain">
                             {navItems.map((item, index) => (
                                 <li key={item}>
-                                    <a
+                                    <Link
                                         href="/"
                                         className={`block rounded-md px-2 py-3 text-sm transition-colors hover:bg-white/10 ${
                                             index === 0
@@ -75,7 +76,7 @@ export function Header({
                                         onClick={closeMenu}
                                     >
                                         {item}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -103,7 +104,7 @@ export function Header({
                 <ul className="hidden flex-wrap items-center gap-4 lg:flex lg:gap-5">
                     {navItems.map((item, index) => (
                         <li key={item}>
-                            <a
+                            <Link
                                 href="/"
                                 className={
                                     index === 0
@@ -112,7 +113,7 @@ export function Header({
                                 }
                             >
                                 {item}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
