@@ -66,7 +66,7 @@ export function Header({
                             {navItems.map((item, index) => (
                                 <li key={item}>
                                     <a
-                                        href="#top"
+                                        href="/"
                                         className={`block rounded-md px-2 py-3 text-sm transition-colors hover:bg-white/10 ${
                                             index === 0
                                                 ? "font-bold text-white"
@@ -84,7 +84,7 @@ export function Header({
             ) : null}
             <nav className="relative z-50 flex items-center justify-between gap-4" aria-label="Main">
                 <a
-                    href="#top"
+                    href="/"
                     className="shrink-0 text-lg font-bold tracking-[0.02em] text-white sm:text-xl"
                     onClick={closeMenu}
                 >
@@ -104,7 +104,7 @@ export function Header({
                     {navItems.map((item, index) => (
                         <li key={item}>
                             <a
-                                href="#top"
+                                href="/"
                                 className={
                                     index === 0
                                         ? "text-base font-bold text-white"
