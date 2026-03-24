@@ -35,7 +35,7 @@ export function HeroSection() {
                         height={684}
                         sizes="(min-width: 1024px) 25rem, 100vw"
                         unoptimized
-                        className="h-auto w-full max-h-[min(38rem,78vh)] object-cover object-top sm:max-h-[min(38rem,82vh)] lg:max-h-none lg:h-171"
+                        className="h-auto w-full max-h-[min(42rem,78vh)] object-cover object-top sm:max-h-[min(43rem,82vh)] lg:max-h-none lg:h-171"
                     />
                 </div>
 
