@@ -32,22 +32,22 @@ function MembershipCard({
 }) {
     return (
         <article
-            className={`rounded-xl p-8 ${highlight ? "bg-[#323443]" : "bg-[#232532]"}`}
+            className={`rounded-xl p-5 sm:p-6 md:p-8 ${highlight ? "bg-[#323443]" : "bg-[#232532]"}`}
         >
-            <h3 className="text-3xl font-semibold text-white">{title}</h3>
-            <p className="mt-6 text-base leading-8 tracking-[0.02em] text-[#efede8a6]">
+            <h3 className="text-2xl font-semibold text-white sm:text-3xl">{title}</h3>
+            <p className="mt-4 text-sm leading-7 tracking-[0.02em] text-[#efede8a6] sm:mt-5 sm:text-base sm:leading-8">
                 {description}
             </p>
-            <ul className="mt-6 space-y-2 text-base leading-8 tracking-[0.02em] text-[#efede8a6]">
+            <ul className="mt-4 space-y-2 text-sm leading-7 tracking-[0.02em] text-[#efede8a6] sm:mt-6 sm:text-base sm:leading-8">
                 {items.map((item) => (
                     <li key={item}>• {item}</li>
                 ))}
             </ul>
             <button
-                className={`mt-8 rounded-[0.625rem] px-6 py-3 font-['Poppins'] text-base font-semibold ${highlight ? "bg-[#0070C9] text-white" : "bg-transparent text-[#0070C9]"}`}
+                type="button"
+                className={`mt-6 w-full min-h-11 rounded-[0.625rem] px-6 py-3 font-['Poppins'] text-base font-semibold sm:mt-8 sm:w-auto ${highlight ? "bg-[#0070C9] text-white" : "bg-transparent text-[#0070C9]"}`}
             >
                 {actionText}
-                
             </button>
         </article>
     );
@@ -55,16 +55,12 @@ function MembershipCard({
 
 export function MembershipSection() {
     return (
-        <section className="pb-20">
-            <h2 className="text-4xl mb-5 font-medium leading-[1.3] tracking-[0.016em] text-white md:text-[3.125rem]">
+        <section className="pb-12 sm:pb-16 md:pb-20 px-4 lg:px-0">
+            <h2 className="mb-4 text-2xl font-medium leading-[1.3] tracking-[0.016em] text-white sm:mb-5 sm:text-3xl md:text-[3.125rem]">
                 Membership
             </h2>
-            <span className="">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1312" height="1" viewBox="0 0 1312 1" fill="none">
-            <path opacity="0.4" d="M0 0.25H1312" stroke="white" stroke-width="0.5"/>
-            </svg>
-            </span>
-            <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="h-px w-full bg-white/40" aria-hidden />
+            <div className="mt-8 grid grid-cols-1 gap-5 sm:mt-10 sm:gap-6 lg:grid-cols-2">
                 <MembershipCard
                     title="Join for Free"
                     description="Reach your fitness goals or maintain your healthy lifestyle with professional training and support from a positive and active online community."
@@ -79,10 +75,10 @@ export function MembershipSection() {
                     highlight
                 />
             </div>
-            <div className="mt-8 flex justify-end">
+            <div className="mt-6 flex sm:mt-8 sm:justify-end">
                 <a
                     href="#top"
-                    className="rounded-lg bg-[#FAFAF9] px-5 py-2 font-['Poppins'] text-base font-semibold text-[#303030]"
+                    className="inline-flex min-h-11 w-full items-center justify-center bg-[#FAFAF9] px-5 py-2 font-['Poppins'] text-base font-semibold text-[#303030] sm:w-auto"
                 >
                     Back to Top
                 </a>
