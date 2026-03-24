@@ -31,9 +31,9 @@ export const metadata: Metadata = {
         description,
         images: [
             {
-                url: "/images/hero-main-669d30.png",
-                width: 409,
-                height: 684,
+                url: "/images/section-training.png",
+                width: 560,
+                height: 510,
                 alt: "Fitness training with WORKOUT — workout at home",
             },
         ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "WORKOUT — Workout With Me | Free Fitness Videos & Programs",
         description,
-        images: ["/images/hero-main-669d30.png"],
+        images: ["/images/section-training.png"],
     },
     robots: {
         index: true,
